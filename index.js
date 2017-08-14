@@ -21,6 +21,7 @@ module.exports = function(url){
         x.scrollIntoView()
         console.log(x.src)
         scrollBy(0,x.clientHeight)
+        i++
       }
       let s = function() {
         let a = document.querySelectorAll('.display_content img')
