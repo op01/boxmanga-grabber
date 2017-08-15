@@ -25,7 +25,11 @@ module.exports = function(url){
       }
       let s = function() {
         let a = document.querySelectorAll('.display_content img')
-        if(i<arr_page.length)f(a[i])
+        if(i<arr_page.length){
+            if(i<a.length){
+              f(a[i])
+            }
+        }
         else {
           $("body").append('<span id="end"></span>')
           clearInterval(it)
@@ -44,7 +48,9 @@ module.exports = function(url){
       }
     })
     .catch(function(error){
-      // console.error('grab failed:', error)
-      return error
+      console.error('grab failed:', error)
+      return {
+          error: err.message
+      }
     })
 }
