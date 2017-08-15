@@ -1,0 +1,1 @@
+process.on('message',m=>require('.')(m).then(x=>process.send(x)))
