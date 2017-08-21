@@ -50,7 +50,7 @@ module.exports = function(url){
     .catch(function(error){
       console.error('grab failed:', error)
       return {
-          error: err.message
+          error: error.message
       }
     })
 }
